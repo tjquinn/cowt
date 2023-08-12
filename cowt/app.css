@@ -1,0 +1,22 @@
+
+map {
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+}
+.tile {
+    width: 64px;
+    height: 64px;
+    box-shadow: 0 0 0 3px #fff inset;
+}
+.player {
+    width: 64px;
+    height: 64px;
+    display: block;
+    background-image: url(char/elf_f_run_anim_f2.png);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    image-rendering: pixelated;
+    position: relative;
+}
