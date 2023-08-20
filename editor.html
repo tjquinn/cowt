@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Moon Forge Editor v0.0.1</title>
+    <script src="editor.js" type="module"></script>
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="editor.css">
+    <meta name="viewport" content="width=500, initial-scale=1" />
+</head>
+<nav>
+
+</nav>
+
+<body>
+    <div id="editor" class="editor">
+        <div id="tiles" class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Moon Forge Editor v0.0.1</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body tabs">
+                <menu role="tablist">
+                    <li role="tab" aria-selected="true"><a href="#tabs">Project</a></li>
+                    <li role="tab"><a href="#tabs">World</a></li>
+                    <li role="tab"><a href="#tabs">Creatures</a></li>
+                    <li role="tab"><a href="#tabs">Towns</a></li>
+                </menu>
+                <div class="window" role="tabpanel">
+                    <div class="window-body">
+                        <p>the tab content</p>
+                    </div>
+                </div>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">Press F1 for help</p>
+                <p class="status-bar-field">Slide 1</p>
+                <p class="status-bar-field">CPU Usage: 14%</p>
+            </div>
+        </div>
+
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">A Title Bar</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <ul class="tree-view">
+                    <li>Table of Contents</li>
+                    <li>What is web development?</li>
+                    <li>
+                        CSS
+                        <ul>
+                            <li>Selectors</li>
+                            <li>Specificity</li>
+                            <li>Properties</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>JavaScript</summary>
+                            <ul>
+                                <li>Avoid at all costs</li>
+                                <li>
+                                    <details>
+                                        <summary>Unless</summary>
+                                        <ul>
+                                            <li>Avoid</li>
+                                            <li>
+                                                <details>
+                                                    <summary>At</summary>
+                                                    <ul>
+                                                        <li>Avoid</li>
+                                                        <li>At</li>
+                                                        <li>All</li>
+                                                        <li>Cost</li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li>All</li>
+                                            <li>Cost</li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>HTML</li>
+                    <li>Special Thanks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+
+</footer>
+
+</html>

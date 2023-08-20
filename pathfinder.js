@@ -1,6 +1,7 @@
 export default class PathFinder {
     constructor(gridElements) {
         this.gridElements = gridElements;
+        this.corner = this.mapPosition(this.gridElements.find(elm => elm.getAttribute('x') === "0" && elm.getAttribute('x')));
     }
 
     getElement(x, y) {
@@ -84,14 +85,14 @@ export default class PathFinder {
         if (x > 0) {
             neighbors.push(this.getElement((x - 1), y));
         }
-        if (x < this.gridElements.length - 1) { 
-            neighbors.push(this.getElement((x + 1), y)); 
+        if (x < this.gridElements.length - 1) {
+            neighbors.push(this.getElement((x + 1), y));
         }
-        if (y > 0) { 
-            neighbors.push(this.getElement(x, (y - 1))); 
+        if (y > 0) {
+            neighbors.push(this.getElement(x, (y - 1)));
         }
-        if (y < this.gridElements.length - 1) { 
-            neighbors.push(this.getElement(x, (y + 1))); 
+        if (y < this.gridElements.length - 1) {
+            neighbors.push(this.getElement(x, (y + 1)));
         }
 
         return neighbors;
@@ -105,20 +106,40 @@ export default class PathFinder {
         }
         return path.reverse();
     }
-
-    mapPosition(tile){
-        return tile.getBoundingClientRect();
-    }
-
-    journey(tile, path){
-        const player = tile.children[0];
-        path.forEach((element, i, arr) => {
-            let tilePos = this.mapPosition(element);
-            player.setAttribute("style", `top:${tilePos.top}px;left:${tilePos.left}px;`);
-            element.append(player);
-            player.removeAttribute("style");
-            element.style.background = "green";
+    getTile(player) {
+        return this.gridElements.find(tile => {
+            if (player.getAttribute('x') === tile.getAttribute('x') && player.getAttribute('y') === tile.getAttribute('y')) {
+                return true;
+            }
         });
     }
-     
+    setTile(player) {
+        return this.gridElements.find(tile => {
+
+        });
+    }
+    mapPosition(tile) {
+        return tile.getBoundingClientRect();
+    }
+    journey(tile, path) {
+        const player = document.querySelector('div.player');
+        const speed = 500;
+        const corner = this.corner;
+        window.playerPath = path;
+        path.forEach((element, i, arr) => {
+            const timer = i * speed / 2 || 250;
+            setTimeout(() => {
+                let top = element.offsetTop - 10;
+                let left = element.offsetLeft - 10;
+                let tileX = element.getAttribute('x');
+                let tileY = element.getAttribute('y');
+                player.setAttribute('x', tileX);
+                player.setAttribute('y', tileY);
+                player.setAttribute("style", `top:${top}px;left:${left}px;`);
+                element.style.background = "#666";
+            }, timer);
+        });
+
+    }
+
 }

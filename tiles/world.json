@@ -1,0 +1,22 @@
+{
+    "_": [
+        {
+            "name": "grasy field",
+            "art": "./assets/tiles/world/grassy_field.png",
+            "travelSpeed": 0.85,
+            "description": "Nice mowed lawn with no obstacles. Dad approved."
+        },
+        {
+            "name": "stone obeliskr",
+            "art": "./assets/tiles/world/stone_obelisk.png",
+            "travelSpeed": 1,
+            "description": "Acient limestone obelisk appers to be worn down and covered in moss."
+        },
+        {
+            "name": "enchanted pond",
+            "art": "./assets/tiles/world/enchanted_pond.png",
+            "travelSpeed": 1,
+            "description": "Oasis for the downtroaten and meek. Drink from the waters amd gain +1 morale for this week."
+        }
+    ]
+}

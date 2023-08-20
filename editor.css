@@ -1,0 +1,38 @@
+pre {
+    background: black;
+    color: white;
+}
+
+body{
+    background:rgb(31, 199, 143);
+}
+
+.editor {
+    width: 100vw - 10px;
+    height: 100vh - 10px;
+}
+
+.window {
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.window-body{
+    margin: 3px;
+}
+
+ul.tile-list{
+    display: inline-flex;
+}
+.tabs ul.tile_list{
+display: inline-flex;
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+.tabs ul.tile_list li img{
+    max-width:128px;
+    display:block;
+    height:auto;
+}

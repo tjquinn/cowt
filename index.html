@@ -4,12 +4,19 @@
         <title>Castle of the Winds</title>
         <script src="app.js" type="module"></script>
         <link rel="stylesheet" href="app.css">
+        <meta name="viewport" content="width=500, initial-scale=1" />
     </head>
     <nav>
-
+            <script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
+            <span>Bard:</span>
+            <a href="#" onClick="MIDIjs.play('assets/music/renaissance_4_(c)clark.mid');">Wake</a>/
+            <a href="#" onClick="MIDIjs.stop('assets/music/renaissance_4_(c)clark.mid');"> Sleep</a>?
+        </script>
     </nav>
     <body>
-        <map></map>
+        <section id="viewer">
+            <map></map>
+        </section>
     </body>
     <footer>
 
