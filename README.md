@@ -7,7 +7,7 @@ Greetings fellow wizard! Let's conjure up some steps to set up this enchanting s
 2. Brew your favorite potions or grab a few drinks of your choice – it's coding time!
 
 **Step 2: Clone the Enchanted Repository**
-1. Fire up your magical powers by cloning the GitHub repository: `git clone https://github](https://github.com/tjquinn/tableCrawler.git).com/your-username/scrollable-repo.git`.
+1. Fire up your magical powers by cloning the GitHub repository: `git clone https://github.com/tjquinn/tableCrawler.git`
 2. Move into the cloned repository: `cd tableCrawler`.
 
 **Step 4: Brew Your Local Server Potion**
